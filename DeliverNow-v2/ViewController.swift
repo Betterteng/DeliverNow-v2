@@ -17,16 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // If there has been a user logged into the application, the system will automatically jump to the welcome page.
-        if NSUserDefaults.standardUserDefaults().valueForKey("uid") != nil && CURRENT_USER.authData != nil {
-            // Get current user's ID
-            let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
-            // Retrieve current user's email property
-            FIREBASE_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
-                let userEmail = (snapshot.value.objectForKey(uid)?.objectForKey("info")?.objectForKey("email"))! as! String
-                self.emailTextField.text = userEmail
-            })
-        }
+        self.setEmailTextField()
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -37,11 +28,13 @@ class ViewController: UIViewController {
             self.logoutButton.hidden = false
             // Get current user's ID
             let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
-            // Retrieve current user's name property
+            // Retrieve current user's name and email property
             FIREBASE_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
                 let userName = (snapshot.value.objectForKey(uid)?.objectForKey("info")?.objectForKey("name"))! as! String
-                // Set the text of userNameLabel
+                let userEmail = (snapshot.value.objectForKey(uid)?.objectForKey("info")?.objectForKey("email"))! as! String
+                // Set the text of userNameLabel and emailTextField
                 self.userNameLabel.text = userName
+                self.emailTextField.text = userEmail
             })
         } else {
             self.userNameLabel.text = "No one logged in now..."
@@ -143,6 +136,22 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let secondViewController = storyboard.instantiateViewControllerWithIdentifier("WelcomPageVC") as UIViewController
         self.presentViewController(secondViewController, animated: true, completion: nil)
+    }
+    
+    /*
+     Set the text of emailTextField depending on current user.
+     */
+    func setEmailTextField() -> Void {
+        // If there has been a user logged into the application, the system will automatically jump to the welcome page.
+        if NSUserDefaults.standardUserDefaults().valueForKey("uid") != nil && CURRENT_USER.authData != nil {
+            // Get current user's ID
+            let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
+            // Retrieve current user's email property
+            FIREBASE_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
+                let userEmail = (snapshot.value.objectForKey(uid)?.objectForKey("info")?.objectForKey("email"))! as! String
+                self.emailTextField.text = userEmail
+            })
+        }
     }
 }
 
