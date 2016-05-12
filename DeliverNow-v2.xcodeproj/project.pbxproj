@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		404341B71CE18ACE00E9180F /* UserOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404341B61CE18ACE00E9180F /* UserOrders.swift */; };
 		407166DC1CDCF0E20098B17C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407166DB1CDCF0E20098B17C /* AppDelegate.swift */; };
 		407166DE1CDCF0E20098B17C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407166DD1CDCF0E20098B17C /* ViewController.swift */; };
 		407166E11CDCF0E20098B17C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407166DF1CDCF0E20098B17C /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		404341B61CE18ACE00E9180F /* UserOrders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOrders.swift; sourceTree = "<group>"; };
 		407166D81CDCF0E20098B17C /* DeliverNow-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DeliverNow-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		407166DB1CDCF0E20098B17C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		407166DD1CDCF0E20098B17C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				407167091CDCF18F0098B17C /* BaseService.swift */,
 				4071670D1CDCFA9F0098B17C /* SignUpViewController.swift */,
 				4071670F1CDCFCEA0098B17C /* ChoiceViewController.swift */,
+				404341B61CE18ACE00E9180F /* UserOrders.swift */,
 			);
 			path = "DeliverNow-v2";
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				407166DE1CDCF0E20098B17C /* ViewController.swift in Sources */,
+				404341B71CE18ACE00E9180F /* UserOrders.swift in Sources */,
 				407166DC1CDCF0E20098B17C /* AppDelegate.swift in Sources */,
 				407167101CDCFCEA0098B17C /* ChoiceViewController.swift in Sources */,
 				4071670E1CDCFA9F0098B17C /* SignUpViewController.swift in Sources */,
