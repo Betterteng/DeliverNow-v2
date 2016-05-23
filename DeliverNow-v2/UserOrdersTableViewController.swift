@@ -15,13 +15,8 @@ class UserOrdersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ordersList = NSMutableArray()
-        downloadOrders()
     }
     
-//    override func viewDidAppear(animated: Bool) {
-//        self.tableView.reloadData()
-//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -38,6 +33,13 @@ class UserOrdersTableViewController: UITableViewController {
         print(ordersList?.count)
         return (ordersList?.count)!
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        ordersList = NSMutableArray()
+        downloadOrders()
+        //self.tableView.reloadData()
+    }
+
     
     
     func downloadOrders() {
