@@ -17,6 +17,8 @@ class addOrderController: UIViewController {
     @IBOutlet var contactTextField: UITextField!
     @IBOutlet var tipTextField: UITextField!
     
+    //var index: Int?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,10 @@ class addOrderController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+//    func setIndex(_index: Int) -> Void {
+//        self.index = _index
+//    }
+    
     @IBAction func submitAction(sender: UIButton) {
         // Extract infromation from the TextFields.
         let eatWhat = self.eatWhatTextField.text
@@ -42,9 +48,16 @@ class addOrderController: UIViewController {
         if eatWhat != "" && restaurant != "" && livingAddress != "" && name != "" && contact != "" && tip != "" {
             // Get current user's ID
             let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
-            // Append user's order information to Firebase.
-            let userInfo = ["eatWhat" : eatWhat!, "restaurant" : restaurant!, "livingAddress" : livingAddress!, "name" : name!, "tip" : tip!]
-             FIREBASE_REF.childByAppendingPath("users/\(uid)/orders").setValue(userInfo)
+            // Retrieve current user's order index property, write order information and reset index
+            FIREBASE_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
+                var orderIndex = (snapshot.value.objectForKey(uid)?.objectForKey("orders")?.objectForKey("index"))! as! Int
+                // Append user's order information to Firebase.
+                let orderInfo = ["eatWhat" : eatWhat!, "restaurant" : restaurant!, "livingAddress" : livingAddress!, "name" : name!, "tip" : tip!, "status:": "To be delivered"]
+                FIREBASE_REF.childByAppendingPath("users/\(uid)/orders/\(orderIndex)").setValue(orderInfo)
+                // Reset index
+                orderIndex += 1
+                FIREBASE_REF.childByAppendingPath("users/\(uid)/orders/index").setValue(orderIndex)
+            })
         } else {
             self.alertIfHasEmptyInput()
         }
