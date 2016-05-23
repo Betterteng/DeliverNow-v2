@@ -11,7 +11,7 @@ import UIKit
 class UserOrdersTableViewController: UITableViewController {
     
     var ordersList: NSMutableArray?
-    let userOrdersURL: String = "https://delivernow-monash4039.firebaseio.com"
+    //let userOrdersURL: String = "https://delivernow-monash4039.firebaseio.com"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,62 +19,61 @@ class UserOrdersTableViewController: UITableViewController {
         downloadOrders()
     }
     
+//    override func viewDidAppear(animated: Bool) {
+//        self.tableView.reloadData()
+//    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    /*
+     There is only one section in the tableView, so we return 1.
+     */
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(ordersList?.count)
+        return (ordersList?.count)!
+    }
     
     
-    func downloadOrders() -> Void {
+    func downloadOrders() {
         // Get current user's ID
         let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
         // Retrieve current user's orders property
         FIREBASE_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
             let userOrdersArray = (snapshot.value.objectForKey(uid)?.objectForKey("orders"))! as! NSArray
             print(userOrdersArray.count)
+            
+            for realUserOrders in (userOrdersArray as NSArray as! [NSDictionary]) {
+                let userOrder = UserOrders(realUserOrders: realUserOrders)
+                
+                //Store the object we created in the NSMutableArray.
+                self.ordersList!.addObject(userOrder)
+            }
+            self.tableView.reloadData()
         })
     }
     
-    
-    
-    /*
-     When the view loads, it will begin to download the data.
-     This method will send the actual request to the webserver create a session.
-     If everything goes well, then it will execute the parseNewJSON method.
-     */
-    func downloadNewsData() {
-        let url: NSURL = NSURL(string: userOrdersURL)!
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url) {
-            (data, response, error) in
-            if (error != nil) {
-                let alert = UIAlertController(title: "Sorry!", message: "We may lost network connection:(", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
-            } else {
-                self.parseNewsJSON(data!)
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.tableView.reloadData()
-                }
-            }
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("UserOrdersCell", forIndexPath: indexPath) as! UserOrderCell
+        
+        // Configure the cell...
+        let userOrder: UserOrders = ordersList![indexPath.row] as! UserOrders
+        
+        if (userOrder.eatWhat != nil) {
+            cell.eatWhatLabel.text = userOrder.eatWhat
+            print(userOrder.eatWhat)
         }
-        task.resume()
-    }
-    
-    /*
-     This method will help us find the information we want, then store them in the NSMutableArray.
-     */
-    func parseNewsJSON(newsJSON: NSData) {
-        do {
-            let result = try NSJSONSerialization.JSONObjectWithData(newsJSON, options: NSJSONReadingOptions.MutableContainers)
-            // Get current user's ID
-            let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
-            //Find the data we want.
-            let newsArray = result.objectForKey("users")?.objectForKey(uid)?.objectForKey("orders") as! NSArray
-            NSLog("Found \(newsArray.count) new news!")
-//            for realNews in (newsArray as NSArray as! [NSDictionary]) {
-//                let news = News(realNews: realNews)
-//                //Store the object we created in the NSMutableArray.
-//                newsList!.addObject(news)
-//            }
-        } catch {
-            print("JSON Serialization error")
+        if (userOrder.orderStatement != nil) {
+            cell.orderStatementLabel.text = userOrder.orderStatement
+            print(userOrder.orderStatement)
         }
+        return cell
     }
 
     /*
