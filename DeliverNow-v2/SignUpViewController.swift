@@ -67,7 +67,7 @@ class SignUpViewController: UIViewController {
                             // Append user's order index
                             let index = 0
                             let orderIndex = ["index": index]
-                            FIREBASE_REF.childByAppendingPath("users/\(uid!)/orders").setValue(orderIndex)
+                            FIREBASE_REF.childByAppendingPath("users/\(uid!)/count").setValue(orderIndex)
                             // Remind user that they have registered successfully.
                             self.alertRegisterSuccessfully()
                             print("Account registered successfully with the userID: \(uid!)")

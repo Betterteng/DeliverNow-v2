@@ -32,9 +32,6 @@ class addOrderController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    func setIndex(_index: Int) -> Void {
-//        self.index = _index
-//    }
     
     @IBAction func submitAction(sender: UIButton) {
         // Extract infromation from the TextFields.
@@ -50,19 +47,22 @@ class addOrderController: UIViewController {
             let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
             // Retrieve current user's order index property, write order information and reset index
             FIREBASE_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
-                var orderIndex = (snapshot.value.objectForKey(uid)?.objectForKey("orders")?.objectForKey("index"))! as! Int
+                var orderIndex = (snapshot.value.objectForKey(uid)?.objectForKey("count")?.objectForKey("index"))! as! Int
                 // Append user's order information to Firebase.
                 let orderInfo = ["eatWhat" : eatWhat!, "restaurant" : restaurant!, "livingAddress" : livingAddress!, "name" : name!, "tip" : tip!, "status:": "To be delivered"]
                 FIREBASE_REF.childByAppendingPath("users/\(uid)/orders/\(orderIndex)").setValue(orderInfo)
                 // Reset index
                 orderIndex += 1
-                FIREBASE_REF.childByAppendingPath("users/\(uid)/orders/index").setValue(orderIndex)
+                FIREBASE_REF.childByAppendingPath("users/\(uid)/count/index").setValue(orderIndex)
             })
         } else {
             self.alertIfHasEmptyInput()
         }
     }
 
+    /*
+     This method will help app go back to previous view.
+     */
     @IBAction func backAction(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
