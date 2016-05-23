@@ -175,11 +175,22 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhg-wf-sCZ">
                                 <rect key="frame" x="163" y="579" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitAction:" destination="GXv-5r-OSf" eventType="touchUpInside" id="euv-Mf-SmG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="contactTextField" destination="gMm-M1-UoI" id="Eag-za-VNf"/>
+                        <outlet property="eatWhatTextField" destination="hpV-NP-19V" id="OSV-mW-B69"/>
+                        <outlet property="livingAddressTextField" destination="prW-xY-cDA" id="vwH-vV-o5Q"/>
+                        <outlet property="nameTextField" destination="p5f-7N-s1X" id="KKa-Ue-qTo"/>
+                        <outlet property="restaurantTextField" destination="lSD-WL-V8n" id="5rL-WB-uo8"/>
+                        <outlet property="tipTextField" destination="N0c-5U-oR9" id="QEK-4Z-YSK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRB-kF-ZYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

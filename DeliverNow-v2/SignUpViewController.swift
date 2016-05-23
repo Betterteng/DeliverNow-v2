@@ -42,7 +42,7 @@ class SignUpViewController: UIViewController {
      and record user's login state.
      */
     @IBAction func submitAction(sender: UIButton) {
-        // Extract infrom from the TextFields.
+        // Extract information from the TextFields.
         let name = self.realNameTextFiled.text
         let password = self.passwordTextField.text
         let confirmPassword = self.confirmPassworTextField.text
@@ -64,6 +64,10 @@ class SignUpViewController: UIViewController {
                             // Append user's information to Firebase.
                             let userInfo = ["name" : name!, "password" : password!, "address" : address!, "mobilePhone" : mobilePhone!, "email" : email!]
                             FIREBASE_REF.childByAppendingPath("users/\(uid!)/info").setValue(userInfo)
+                            // Append user's order index
+                            let index = 0
+                            let orderIndex = ["index": index]
+                            FIREBASE_REF.childByAppendingPath("users/\(uid!)").setValue(orderIndex)
                             // Remind user that they have registered successfully.
                             self.alertRegisterSuccessfully()
                             print("Account registered successfully with the userID: \(uid!)")
