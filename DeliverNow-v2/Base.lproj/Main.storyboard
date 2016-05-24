@@ -5,34 +5,58 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
-        <scene sceneID="tHx-gX-IPK">
+        <!--All orders-->
+        <scene sceneID="UVz-rP-ckB">
             <objects>
-                <tableViewController id="8e8-0A-Ia9" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dGs-fH-gZw">
+                <tableViewController id="pAb-Xk-Bp7" customClass="AllOrdersTableController" customModule="DeliverNow_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Yhs-6u-RNe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="flf-k2-9Ph">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cNS-bP-pDE">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="flf-k2-9Ph" id="uPX-oS-ZsN">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cNS-bP-pDE" id="34u-s8-JYN">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="8e8-0A-Ia9" id="ROh-ci-cG3"/>
-                            <outlet property="delegate" destination="8e8-0A-Ia9" id="9U1-97-OV8"/>
+                            <outlet property="dataSource" destination="pAb-Xk-Bp7" id="QfN-Bg-Rnc"/>
+                            <outlet property="delegate" destination="pAb-Xk-Bp7" id="hqT-aR-sCH"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="All orders" id="PAc-Yy-sqK">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="k87-1a-LnF">
+                            <connections>
+                                <action selector="backAction:" destination="pAb-Xk-Bp7" id="3kE-Av-Yvy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="46n-Fs-Ysu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ARt-jw-wfm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-56.5" y="-373.5"/>
+            <point key="canvasLocation" x="515.5" y="-1126.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lVM-wQ-ct2">
+            <objects>
+                <navigationController id="4p3-W5-HVJ" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xHs-3A-Mpv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pAb-Xk-Bp7" kind="relationship" relationship="rootViewController" id="yPA-Cw-UcQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XGh-1Z-cce" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25.5" y="-1126.5"/>
         </scene>
         <!--Choice View Controller-->
         <scene sceneID="J6t-iN-RoW">
@@ -69,6 +93,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aro-p2-4Lm">
                                 <rect key="frame" x="133" y="585" width="109" height="30"/>
                                 <state key="normal" title="I want to deliver"/>
+                                <connections>
+                                    <segue destination="4p3-W5-HVJ" kind="presentation" id="poU-dp-7sg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOi-9x-Hgg">
                                 <rect key="frame" x="146" y="359" width="83" height="30"/>

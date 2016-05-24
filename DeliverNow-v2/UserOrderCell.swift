@@ -2,7 +2,7 @@
 //  UserOrderCell.swift
 //  DeliverNow-v2
 //
-//  Created by 滕施男 on 23/05/2016.
+//  Created by 滕施男 on 18/05/2016.
 //  Copyright © 2016 TENG. All rights reserved.
 //
 
