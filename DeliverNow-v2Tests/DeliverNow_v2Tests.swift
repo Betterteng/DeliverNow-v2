@@ -33,4 +33,19 @@ class DeliverNow_v2Tests: XCTestCase {
         }
     }
     
+    func testUIAlertViewShowsAfterViewLoads() -> Void {
+        class FakeAlertView: UIAlertView {
+            var showWasCalled = false
+            
+            private override func show() {
+                showWasCalled = true
+            }
+        }
+        
+        let vc = MapViewController()
+        vc.alertView = FakeAlertView()
+        vc.viewDidLoad()
+        XCTAssertTrue((vc.alertView as! FakeAlertView).showWasCalled, "Show was not called...")
+    }
+    
 }

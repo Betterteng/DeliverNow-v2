@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		403535DD1CF3E64900F9FE58 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403535DC1CF3E64900F9FE58 /* MapViewController.swift */; };
 		403535DF1CF3F0B500F9FE58 /* AllOrdersTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403535DE1CF3F0B500F9FE58 /* AllOrdersTableController.swift */; };
+		403535E01CF3F7B500F9FE58 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403535DC1CF3E64900F9FE58 /* MapViewController.swift */; };
 		406158E71CF303A0001A14E6 /* UserOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406158E61CF303A0001A14E6 /* UserOrderCell.swift */; };
 		407166DC1CDCF0E20098B17C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407166DB1CDCF0E20098B17C /* AppDelegate.swift */; };
 		407166DE1CDCF0E20098B17C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407166DD1CDCF0E20098B17C /* ViewController.swift */; };
@@ -377,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				407166F11CDCF0E20098B17C /* DeliverNow_v2Tests.swift in Sources */,
+				403535E01CF3F7B500F9FE58 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
