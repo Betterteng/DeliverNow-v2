@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		403535DD1CF3E64900F9FE58 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403535DC1CF3E64900F9FE58 /* MapViewController.swift */; };
 		406158E71CF303A0001A14E6 /* UserOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406158E61CF303A0001A14E6 /* UserOrderCell.swift */; };
 		407166DC1CDCF0E20098B17C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407166DB1CDCF0E20098B17C /* AppDelegate.swift */; };
 		407166DE1CDCF0E20098B17C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407166DD1CDCF0E20098B17C /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		403535DC1CF3E64900F9FE58 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		406158E61CF303A0001A14E6 /* UserOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOrderCell.swift; sourceTree = "<group>"; };
 		407166D81CDCF0E20098B17C /* DeliverNow-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DeliverNow-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		407166DB1CDCF0E20098B17C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				40E961611CF1E316008A6A7E /* addOrderController.swift */,
 				406158E61CF303A0001A14E6 /* UserOrderCell.swift */,
 				40DE3B9A1CF30AF90077DC41 /* UserOrders.swift */,
+				403535DC1CF3E64900F9FE58 /* MapViewController.swift */,
 			);
 			path = "DeliverNow-v2";
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				407166DE1CDCF0E20098B17C /* ViewController.swift in Sources */,
 				406158E71CF303A0001A14E6 /* UserOrderCell.swift in Sources */,
 				407166DC1CDCF0E20098B17C /* AppDelegate.swift in Sources */,
+				403535DD1CF3E64900F9FE58 /* MapViewController.swift in Sources */,
 				407167101CDCFCEA0098B17C /* ChoiceViewController.swift in Sources */,
 				4071670E1CDCFA9F0098B17C /* SignUpViewController.swift in Sources */,
 				4071670A1CDCF18F0098B17C /* BaseService.swift in Sources */,
