@@ -32,7 +32,7 @@ class addOrderController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    // Add order information to the Firebase
     @IBAction func submitAction(sender: UIButton) {
         // Extract infromation from the TextFields.
         let eatWhat = self.eatWhatTextField.text
@@ -49,7 +49,7 @@ class addOrderController: UIViewController {
             FIREBASE_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
                 var orderIndex = (snapshot.value.objectForKey(uid)?.objectForKey("count")?.objectForKey("index"))! as! Int
                 // Append user's order information to Firebase.
-                let orderInfo = ["eatWhat" : eatWhat!, "restaurant" : restaurant!, "livingAddress" : livingAddress!, "name" : name!, "tip" : tip!, "status:": "To be delivered"]
+                let orderInfo = ["eatWhat" : eatWhat!, "restaurant" : restaurant!, "livingAddress" : livingAddress!, "name" : name!, "tip" : tip!, "status" : "To be delivered"]
                 FIREBASE_REF.childByAppendingPath("users/\(uid)/orders/\(orderIndex)").setValue(orderInfo)
                 // Reset index
                 orderIndex += 1
