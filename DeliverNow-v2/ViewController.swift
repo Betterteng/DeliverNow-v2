@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setEmailTextField()
+        //self.setEmailTextField()
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -142,7 +142,7 @@ class ViewController: UIViewController {
      Set the text of emailTextField depending on current user.
      */
     func setEmailTextField() -> Void {
-        // If there has been a user logged into the application, the system will automatically jump to the welcome page.
+        // If there has been a user logged into the application
         if NSUserDefaults.standardUserDefaults().valueForKey("uid") != nil && CURRENT_USER.authData != nil {
             // Get current user's ID
             let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String

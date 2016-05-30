@@ -34,30 +34,8 @@ class addOrderController: UIViewController {
     
     // Add order information to the Firebase
     @IBAction func submitAction(sender: UIButton) {
-        // Extract infromation from the TextFields.
-        let eatWhat = self.eatWhatTextField.text
-        let restaurant = self.restaurantTextField.text
-        let livingAddress = self.livingAddressTextField.text
-        let name = self.nameTextField.text
-        let contact = self.contactTextField.text
-        let tip = self.tipTextField.text
-        
-        if eatWhat != "" && restaurant != "" && livingAddress != "" && name != "" && contact != "" && tip != "" {
-            // Get current user's ID
-            let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
-            // Retrieve current user's order index property, write order information and reset index
-            FIREBASE_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
-                var orderIndex = (snapshot.value.objectForKey(uid)?.objectForKey("count")?.objectForKey("index"))! as! Int
-                // Append user's order information to Firebase.
-                let orderInfo = ["eatWhat" : eatWhat!, "restaurant" : restaurant!, "livingAddress" : livingAddress!, "name" : name!, "tip" : tip!, "status" : "To be delivered"]
-                FIREBASE_REF.childByAppendingPath("users/\(uid)/orders/\(orderIndex)").setValue(orderInfo)
-                // Reset index
-                orderIndex += 1
-                FIREBASE_REF.childByAppendingPath("users/\(uid)/count/index").setValue(orderIndex)
-            })
-        } else {
-            self.alertIfHasEmptyInput()
-        }
+        addOrderToUser()
+        alertSubmitSuccessfully()
     }
 
     /*
@@ -84,5 +62,45 @@ class addOrderController: UIViewController {
         let action = UIAlertAction(title: "Got it", style: .Default, handler: nil)
         alert.addAction(action)
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    /*
+     Remind user they have submit succeessfully.
+     */
+    func alertSubmitSuccessfully() -> Void {
+        let alert = UIAlertController(title: "Congratulations", message: "You've added your order to the list!", preferredStyle: .Alert)
+        let action = UIAlertAction(title: "Got it", style: .Default, handler: nil)
+        alert.addAction(action)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    /*
+     This method will help user to add orders to their own "Order list".
+     */
+    func addOrderToUser() -> Void {
+        // Extract infromation from the TextFields.
+        let eatWhat = self.eatWhatTextField.text
+        let restaurant = self.restaurantTextField.text
+        let livingAddress = self.livingAddressTextField.text
+        let name = self.nameTextField.text
+        let contact = self.contactTextField.text
+        let tip = self.tipTextField.text
+        
+        if eatWhat != "" && restaurant != "" && livingAddress != "" && name != "" && contact != "" && tip != "" {
+            // Get current user's ID
+            let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
+            // Retrieve current user's order index property, write order information and reset index
+            FIREBASE_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
+                var orderIndex = (snapshot.value.objectForKey(uid)?.objectForKey("count")?.objectForKey("index"))! as! Int
+                // Append user's order information to Firebase.
+                let orderInfo = ["eatWhat" : eatWhat!, "restaurant" : restaurant!, "livingAddress" : livingAddress!, "name" : name!, "tip" : tip!, "status" : "To be delivered"]
+                FIREBASE_REF.childByAppendingPath("users/\(uid)/orders/\(orderIndex)").setValue(orderInfo)
+                // Reset index
+                orderIndex += 1
+                FIREBASE_REF.childByAppendingPath("users/\(uid)/count/index").setValue(orderIndex)
+            })
+        } else {
+            self.alertIfHasEmptyInput()
+        }
     }
 }
