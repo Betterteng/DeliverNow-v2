@@ -248,6 +248,7 @@
 				TargetAttributes = {
 					407166D71CDCF0E20098B17C = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = D2444HVW52;
 					};
 					407166EB1CDCF0E20098B17C = {
 						CreatedOnToolsVersion = 7.3;
@@ -513,10 +514,14 @@
 			baseConfigurationReference = 86EB1E53A8F7D5357DA8D3C9 /* Pods-DeliverNow-v2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "DeliverNow-v2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "monash.DeliverNow-v2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -525,10 +530,14 @@
 			baseConfigurationReference = 6544D6A5D9D1500FC847FF9C /* Pods-DeliverNow-v2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "DeliverNow-v2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "monash.DeliverNow-v2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

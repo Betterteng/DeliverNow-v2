@@ -335,18 +335,6 @@
                                     <segue destination="Hih-Ba-Gv2" kind="presentation" id="VHz-PA-B3G"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current user:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADg-LD-R09">
-                                <rect key="frame" x="20" y="452" width="101" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="user name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJZ-yu-uA9">
-                                <rect key="frame" x="129" y="452" width="156" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9P-c1-xoA">
                                 <rect key="frame" x="163" y="617" width="48" height="30"/>
                                 <state key="normal" title="Logout"/>
@@ -362,7 +350,6 @@
                         <outlet property="emailTextField" destination="up7-Kw-Vlp" id="L6A-1G-KoO"/>
                         <outlet property="logoutButton" destination="s9P-c1-xoA" id="aCQ-4F-FXk"/>
                         <outlet property="passwordTextField" destination="co5-oS-b8K" id="4Q9-YO-Coq"/>
-                        <outlet property="userNameLabel" destination="lJZ-yu-uA9" id="LG1-pJ-QEZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

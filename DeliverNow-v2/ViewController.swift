@@ -13,11 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var logoutButton: UIButton!
-    @IBOutlet var userNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.setEmailTextField()
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -26,18 +24,6 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         if NSUserDefaults.standardUserDefaults().valueForKey("uid") != nil && CURRENT_USER.authData != nil {
             self.logoutButton.hidden = false
-            // Get current user's ID
-            let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
-            // Retrieve current user's name and email property
-            FIREBASE_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
-                let userName = (snapshot.value.objectForKey(uid)?.objectForKey("info")?.objectForKey("name"))! as! String
-                let userEmail = (snapshot.value.objectForKey(uid)?.objectForKey("info")?.objectForKey("email"))! as! String
-                // Set the text of userNameLabel and emailTextField
-                self.userNameLabel.text = userName
-                self.emailTextField.text = userEmail
-            })
-        } else {
-            self.userNameLabel.text = "No one logged in now..."
         }
     }
     
@@ -68,7 +54,6 @@ class ViewController: UIViewController {
                     //Record the login state of current user.
                     NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "uid")
                     print("Logged in succeessfully with the userID: \(authData.uid)")
-                    
                     // Jump to the welcome page.
                     self.jumpToWelcomePage()
                     // Hide the logout button.
@@ -92,7 +77,6 @@ class ViewController: UIViewController {
         CURRENT_USER.unauth()
         NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
         self.logoutButton.hidden = true
-        userNameLabel.text = "No one logged in now..."
     }
     
     /*

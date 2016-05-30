@@ -17,9 +17,6 @@ class addOrderController: UIViewController {
     @IBOutlet var contactTextField: UITextField!
     @IBOutlet var tipTextField: UITextField!
     
-    //var index: Int?
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Looks for single or multiple taps.
@@ -35,6 +32,7 @@ class addOrderController: UIViewController {
     // Add order information to the Firebase
     @IBAction func submitAction(sender: UIButton) {
         addOrderToUser()
+        addOrderToAll()
         alertSubmitSuccessfully()
     }
 
@@ -98,6 +96,37 @@ class addOrderController: UIViewController {
                 // Reset index
                 orderIndex += 1
                 FIREBASE_REF.childByAppendingPath("users/\(uid)/count/index").setValue(orderIndex)
+            })
+        } else {
+            self.alertIfHasEmptyInput()
+        }
+    }
+    
+    /*
+     Add user's order to anthor database.
+     "Another database" is used to provide info for delivery men.
+     */
+    func addOrderToAll() -> Void {
+        // Extract infromation from the TextFields.
+        let eatWhat = self.eatWhatTextField.text
+        let restaurant = self.restaurantTextField.text
+        let livingAddress = self.livingAddressTextField.text
+        let name = self.nameTextField.text
+        let contact = self.contactTextField.text
+        let tip = self.tipTextField.text
+        
+        if eatWhat != "" && restaurant != "" && livingAddress != "" && name != "" && contact != "" && tip != "" {
+            // Get current user's ID
+            let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
+            // Retrieve current user's order index property, write order information and reset index
+            FIREBASE_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
+                var orderIndex = (snapshot.value.objectForKey("index"))! as! Int
+                // Append user's order information to Firebase.
+                let orderInfo = ["eatWhat" : eatWhat!, "restaurant" : restaurant!, "livingAddress" : livingAddress!, "name" : name!, "tip" : tip!, "status" : "To be delivered", "userID" : uid]
+                FIREBASE_REF.childByAppendingPath("users/allOrders/\(orderIndex)").setValue(orderInfo)
+                // Reset index
+                orderIndex += 1
+                FIREBASE_REF.childByAppendingPath("users/index").setValue(orderIndex)
             })
         } else {
             self.alertIfHasEmptyInput()
