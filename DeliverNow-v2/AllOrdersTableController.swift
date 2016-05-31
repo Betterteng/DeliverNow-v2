@@ -83,7 +83,14 @@ class AllOrdersTableController: UITableViewController {
         }
         return cell
     }
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showOrderDetailAllSegue") {
+            let controller: OrderDetailAllController = segue.destinationViewController as! OrderDetailAllController
+            let order: UserOrders = self.ordersList![(self.tableView.indexPathForSelectedRow?.row)!] as! UserOrders
+            controller.order = order
+        }
+    }
     
     /*
      Popup an alert if doesn't have any orders.

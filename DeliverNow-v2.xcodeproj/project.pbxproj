@@ -22,6 +22,7 @@
 		4071670E1CDCFA9F0098B17C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4071670D1CDCFA9F0098B17C /* SignUpViewController.swift */; };
 		407167101CDCFCEA0098B17C /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4071670F1CDCFCEA0098B17C /* ChoiceViewController.swift */; };
 		40DBBC9F1CFD6A8F00E797AE /* AllOrdersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBBC9E1CFD6A8F00E797AE /* AllOrdersCell.swift */; };
+		40DBBCA11CFDD52C00E797AE /* OrderDetailAllController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBBCA01CFDD52C00E797AE /* OrderDetailAllController.swift */; };
 		40DE3B9B1CF30AF90077DC41 /* UserOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE3B9A1CF30AF90077DC41 /* UserOrders.swift */; };
 		40E961601CF1DFFF008A6A7E /* UserOrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E9615F1CF1DFFF008A6A7E /* UserOrdersTableViewController.swift */; };
 		40E961621CF1E316008A6A7E /* addOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E961611CF1E316008A6A7E /* addOrderController.swift */; };
@@ -66,6 +67,7 @@
 		4071670D1CDCFA9F0098B17C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4071670F1CDCFCEA0098B17C /* ChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		40DBBC9E1CFD6A8F00E797AE /* AllOrdersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllOrdersCell.swift; sourceTree = "<group>"; };
+		40DBBCA01CFDD52C00E797AE /* OrderDetailAllController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailAllController.swift; sourceTree = "<group>"; };
 		40DE3B9A1CF30AF90077DC41 /* UserOrders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOrders.swift; sourceTree = "<group>"; };
 		40E9615F1CF1DFFF008A6A7E /* UserOrdersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOrdersTableViewController.swift; sourceTree = "<group>"; };
 		40E961611CF1E316008A6A7E /* addOrderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addOrderController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				403535DC1CF3E64900F9FE58 /* MapViewController.swift */,
 				403535DE1CF3F0B500F9FE58 /* AllOrdersTableController.swift */,
 				40DBBC9E1CFD6A8F00E797AE /* AllOrdersCell.swift */,
+				40DBBCA01CFDD52C00E797AE /* OrderDetailAllController.swift */,
 			);
 			path = "DeliverNow-v2";
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				403535DD1CF3E64900F9FE58 /* MapViewController.swift in Sources */,
 				407167101CDCFCEA0098B17C /* ChoiceViewController.swift in Sources */,
 				4071670E1CDCFA9F0098B17C /* SignUpViewController.swift in Sources */,
+				40DBBCA11CFDD52C00E797AE /* OrderDetailAllController.swift in Sources */,
 				4071670A1CDCF18F0098B17C /* BaseService.swift in Sources */,
 				40E961601CF1DFFF008A6A7E /* UserOrdersTableViewController.swift in Sources */,
 				40DE3B9B1CF30AF90077DC41 /* UserOrders.swift in Sources */,
