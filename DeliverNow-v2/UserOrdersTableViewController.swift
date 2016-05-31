@@ -72,8 +72,8 @@ class UserOrdersTableViewController: UITableViewController {
             cell.eatWhatLabel.text = userOrder.eatWhat
         }
         // Set order statement label.
-        if (userOrder.orderStatement != nil) {
-            cell.orderStatementLabel.text = userOrder.orderStatement
+        if (userOrder.restaurantAddress != nil) {
+            cell.orderStatementLabel.text = userOrder.restaurantAddress
         }
         return cell
     }

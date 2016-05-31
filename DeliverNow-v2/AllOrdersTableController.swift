@@ -21,16 +21,16 @@ class AllOrdersTableController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
-//    /*
-//     There is only one section in the tableView, so we return 1.
-//     */
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        return 1
-//    }
-//    
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return (ordersList?.count)!
-//    }
+    /*
+     There is only one section in the tableView, so we return 1.
+     */
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (ordersList?.count)!
+    }
     
     override func viewWillAppear(animated: Bool) {
         ordersList = NSMutableArray()
@@ -42,43 +42,48 @@ class AllOrdersTableController: UITableViewController {
      */
     func downloadOrders() {
         
-//        FIREBASE_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
-//            // Judge if user has order. If none, popup an alert
-//            if snapshot.value.objectForKey("allOrders") == nil {
-//                self.alertIfNoneOrders()
-//            } else {
-////                let userOrdersArray = (snapshot.value.objectForKey("allOrders"))! as! NSArray
-////                // Create order objects and put them into the NSMutableArray.
-////                
-////                print(userOrdersArray.count)
-////                
-////                
-////                for realUserOrders in (userOrdersArray as NSArray as! [NSDictionary]) {
-////                    let userOrder = UserOrders(realUserOrders: realUserOrders)
-////                    self.ordersList!.addObject(userOrder)
-////                    
-////                
-////                }
-//                
-//                let xxxxx = (snapshot.value.objectForKey("allOrders")?.objectForKey("0")?.objectForKey("eatWhat"))! as! String
-//                print(xxxxx)
-//                
-//                
-//                self.tableView.reloadData()
-//            }
-//        })
-        
-        
-        
-        FIREBASE_REF.observeEventType(.Value, withBlock: { snapshot in
-            print(snapshot.value.objectForKey("users")?.objectForKey("allOrders"))
-            }, withCancelBlock: { error in
-                print(error.description)
+        FIREBASE_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
+            // Judge if user has order. If none, popup an alert
+            if snapshot.value.objectForKey("allOrders") == nil {
+                self.alertIfNoneOrders()
+            } else {
+                let userOrdersArray = (snapshot.value.objectForKey("allOrders"))! as! NSArray
+                
+                
+                print(userOrdersArray.count)
+                
+                // Create order objects and put them into the NSMutableArray.
+                for realUserOrders in (userOrdersArray as NSArray as! [NSDictionary]) {
+                    let userOrder = UserOrders(realUserOrders: realUserOrders)
+                    self.ordersList!.addObject(userOrder)
+                }
+                self.tableView.reloadData()
+            }
         })
-
-       
-        
     }
+    
+    /*
+     Configure the cells.
+     */
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("AllOrderCell", forIndexPath: indexPath) as! AllOrderCell
+        // Configure the cell...
+        let userOrder: UserOrders = ordersList![indexPath.row] as! UserOrders
+        // Set eatWhat label.
+        if (userOrder.eatWhat != nil) {
+            cell.eatWhatLabel.text = userOrder.eatWhat
+        }
+        // Set living address label.
+        if (userOrder.livingAddress != nil) {
+            cell.userAddressLabel.text = userOrder.livingAddress
+        }
+        // Set tip label.
+        if (userOrder.tip != nil) {
+            cell.tipLabel.text = userOrder.tip
+        }
+        return cell
+    }
+
     
     /*
      Popup an alert if doesn't have any orders.
