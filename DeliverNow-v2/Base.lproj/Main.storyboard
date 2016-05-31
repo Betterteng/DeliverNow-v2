@@ -36,10 +36,6 @@
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ec-Dc-xtw">
-                                <rect key="frame" x="20" y="402" width="335" height="207"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                            </webView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Customer's name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fv5-m3-XgN">
                                 <rect key="frame" x="20" y="216" width="192" height="25"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
@@ -100,6 +96,9 @@
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tR9-9s-AWc">
+                                <rect key="frame" x="20" y="402" width="335" height="207"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -108,6 +107,7 @@
                         <outlet property="cAddLabel" destination="w09-vi-TlZ" id="moX-F2-mq0"/>
                         <outlet property="contactLabel" destination="shT-ry-T4l" id="56h-mD-UxC"/>
                         <outlet property="eatWhatLabel" destination="tHW-54-hmm" id="6R3-OK-j89"/>
+                        <outlet property="mapView" destination="tR9-9s-AWc" id="P1w-WZ-EPA"/>
                         <outlet property="nameLabel" destination="Ktt-QS-Ixq" id="WHw-hP-HpV"/>
                         <outlet property="rAddLabel" destination="bKK-ao-9HN" id="9nP-6E-Gqf"/>
                         <outlet property="tipLabel" destination="NtN-Zd-uec" id="BFq-Mq-Sk8"/>

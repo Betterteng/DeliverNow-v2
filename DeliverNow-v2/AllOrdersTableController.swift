@@ -48,10 +48,6 @@ class AllOrdersTableController: UITableViewController {
                 self.alertIfNoneOrders()
             } else {
                 let userOrdersArray = (snapshot.value.objectForKey("allOrders"))! as! NSArray
-                
-                
-                print(userOrdersArray.count)
-                
                 // Create order objects and put them into the NSMutableArray.
                 for realUserOrders in (userOrdersArray as NSArray as! [NSDictionary]) {
                     let userOrder = UserOrders(realUserOrders: realUserOrders)

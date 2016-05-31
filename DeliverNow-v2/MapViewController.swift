@@ -15,12 +15,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     @IBOutlet var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
-    var alertView = UIAlertView(title: "Hello!", message: "Please wait for a while...", delegate: nil, cancelButtonTitle: "Got it")
+//    var alertView = UIAlertView(title: "Hello!", message: "Please wait for a while...", delegate: nil, cancelButtonTitle: "Got it")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        alertView.show()
+        //alertView.show()
         
         self.locationManager.delegate = self
         // To get the most correct location.
@@ -54,6 +54,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("Error: " + error.localizedDescription)
     }
+    
     @IBAction func backAction(sender: UIBarButtonItem) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
