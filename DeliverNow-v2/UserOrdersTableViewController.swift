@@ -77,6 +77,17 @@ class UserOrdersTableViewController: UITableViewController {
         }
         return cell
     }
+    
+    /*
+     Pass order object to OrderDetailAllController.
+     */
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showOrderDetailUserSegue") {
+            let controller: OrderDetailUserController = segue.destinationViewController as! OrderDetailUserController
+            let order: UserOrders = self.ordersList![(self.tableView.indexPathForSelectedRow?.row)!] as! UserOrders
+            controller.order = order
+        }
+    }
 
     /*
      This method will help app go back to previous view.

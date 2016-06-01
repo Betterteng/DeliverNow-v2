@@ -11,6 +11,7 @@
 		403535DF1CF3F0B500F9FE58 /* AllOrdersTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403535DE1CF3F0B500F9FE58 /* AllOrdersTableController.swift */; };
 		403535E01CF3F7B500F9FE58 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403535DC1CF3E64900F9FE58 /* MapViewController.swift */; };
 		406158E71CF303A0001A14E6 /* UserOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406158E61CF303A0001A14E6 /* UserOrderCell.swift */; };
+		406E38091CFEE8E90073C8A5 /* OrderDetailUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406E38081CFEE8E90073C8A5 /* OrderDetailUserController.swift */; };
 		407166DC1CDCF0E20098B17C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407166DB1CDCF0E20098B17C /* AppDelegate.swift */; };
 		407166DE1CDCF0E20098B17C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407166DD1CDCF0E20098B17C /* ViewController.swift */; };
 		407166E11CDCF0E20098B17C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407166DF1CDCF0E20098B17C /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		403535DC1CF3E64900F9FE58 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		403535DE1CF3F0B500F9FE58 /* AllOrdersTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllOrdersTableController.swift; sourceTree = "<group>"; };
 		406158E61CF303A0001A14E6 /* UserOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOrderCell.swift; sourceTree = "<group>"; };
+		406E38081CFEE8E90073C8A5 /* OrderDetailUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailUserController.swift; sourceTree = "<group>"; };
 		407166D81CDCF0E20098B17C /* DeliverNow-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DeliverNow-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		407166DB1CDCF0E20098B17C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		407166DD1CDCF0E20098B17C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				403535DE1CF3F0B500F9FE58 /* AllOrdersTableController.swift */,
 				40DBBC9E1CFD6A8F00E797AE /* AllOrdersCell.swift */,
 				40DBBCA01CFDD52C00E797AE /* OrderDetailAllController.swift */,
+				406E38081CFEE8E90073C8A5 /* OrderDetailUserController.swift */,
 			);
 			path = "DeliverNow-v2";
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				406E38091CFEE8E90073C8A5 /* OrderDetailUserController.swift in Sources */,
 				407166DE1CDCF0E20098B17C /* ViewController.swift in Sources */,
 				406158E71CF303A0001A14E6 /* UserOrderCell.swift in Sources */,
 				407166DC1CDCF0E20098B17C /* AppDelegate.swift in Sources */,

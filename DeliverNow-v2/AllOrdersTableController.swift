@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class AllOrdersTableController: UITableViewController {
     
@@ -80,6 +79,9 @@ class AllOrdersTableController: UITableViewController {
         return cell
     }
     
+    /*
+     Pass order object to OrderDetailAllController.
+     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "showOrderDetailAllSegue") {
             let controller: OrderDetailAllController = segue.destinationViewController as! OrderDetailAllController
