@@ -15,7 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        // Change navigation bar background image.
+        let navigationBgImage: UIImage! = UIImage(named: "2.png")
+        UINavigationBar.appearance().setBackgroundImage(navigationBgImage, forBarMetrics: .Default)
+        
         return true
     }
 
