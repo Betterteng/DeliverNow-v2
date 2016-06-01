@@ -10,6 +10,7 @@
 		403535DF1CF3F0B500F9FE58 /* AllOrdersTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403535DE1CF3F0B500F9FE58 /* AllOrdersTableController.swift */; };
 		406158E71CF303A0001A14E6 /* UserOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406158E61CF303A0001A14E6 /* UserOrderCell.swift */; };
 		406E38091CFEE8E90073C8A5 /* OrderDetailUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406E38081CFEE8E90073C8A5 /* OrderDetailUserController.swift */; };
+		406E380B1CFF066D0073C8A5 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406E380A1CFF066D0073C8A5 /* MapController.swift */; };
 		407166DC1CDCF0E20098B17C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407166DB1CDCF0E20098B17C /* AppDelegate.swift */; };
 		407166DE1CDCF0E20098B17C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407166DD1CDCF0E20098B17C /* ViewController.swift */; };
 		407166E11CDCF0E20098B17C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407166DF1CDCF0E20098B17C /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		403535DE1CF3F0B500F9FE58 /* AllOrdersTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllOrdersTableController.swift; sourceTree = "<group>"; };
 		406158E61CF303A0001A14E6 /* UserOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOrderCell.swift; sourceTree = "<group>"; };
 		406E38081CFEE8E90073C8A5 /* OrderDetailUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailUserController.swift; sourceTree = "<group>"; };
+		406E380A1CFF066D0073C8A5 /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		407166D81CDCF0E20098B17C /* DeliverNow-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DeliverNow-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		407166DB1CDCF0E20098B17C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		407166DD1CDCF0E20098B17C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				40DBBC9E1CFD6A8F00E797AE /* AllOrdersCell.swift */,
 				40DBBCA01CFDD52C00E797AE /* OrderDetailAllController.swift */,
 				406E38081CFEE8E90073C8A5 /* OrderDetailUserController.swift */,
+				406E380A1CFF066D0073C8A5 /* MapController.swift */,
 			);
 			path = "DeliverNow-v2";
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				407167101CDCFCEA0098B17C /* ChoiceViewController.swift in Sources */,
 				4071670E1CDCFA9F0098B17C /* SignUpViewController.swift in Sources */,
 				40DBBCA11CFDD52C00E797AE /* OrderDetailAllController.swift in Sources */,
+				406E380B1CFF066D0073C8A5 /* MapController.swift in Sources */,
 				4071670A1CDCF18F0098B17C /* BaseService.swift in Sources */,
 				40E961601CF1DFFF008A6A7E /* UserOrdersTableViewController.swift in Sources */,
 				40DE3B9B1CF30AF90077DC41 /* UserOrders.swift in Sources */,

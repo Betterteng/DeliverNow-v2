@@ -77,6 +77,11 @@ class ViewController: UIViewController {
         CURRENT_USER.unauth()
         NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
         self.logoutButton.hidden = true
+        // Set the alert
+        let alert = UIAlertController(title: "Thanks", message: "You've logged out successfully!", preferredStyle: .Alert)
+        let action = UIAlertAction(title: "Got it", style: .Default, handler: nil)
+        alert.addAction(action)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     /*

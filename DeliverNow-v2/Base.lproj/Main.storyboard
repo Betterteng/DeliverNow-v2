@@ -17,88 +17,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTU-92-pX6">
+                                <rect key="frame" x="91" y="579" width="192" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="GET THE LOCATION"/>
+                                <connections>
+                                    <segue destination="zS4-Jg-rW8" kind="presentation" id="mhl-7l-XS3"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOx-GF-2da">
-                                <rect key="frame" x="170" y="617" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
+                                <rect key="frame" x="159" y="623" width="57" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="BACK"/>
                                 <connections>
                                     <action selector="backAction:" destination="J6I-mg-cXD" eventType="touchUpInside" id="wEZ-b2-fzy"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Want to eat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUA-a8-5l3">
-                                <rect key="frame" x="20" y="28" width="137" height="27"/>
+                                <rect key="frame" x="20" y="105" width="137" height="27"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="eatWhatL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHW-54-hmm">
-                                <rect key="frame" x="20" y="63" width="335" height="21"/>
+                                <rect key="frame" x="20" y="140" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Customer's name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fv5-m3-XgN">
-                                <rect key="frame" x="20" y="216" width="192" height="25"/>
+                                <rect key="frame" x="20" y="293" width="192" height="25"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Delivery fee:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLw-c3-NCs">
-                                <rect key="frame" x="20" y="340" width="131" height="25"/>
+                                <rect key="frame" x="20" y="417" width="131" height="25"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restautant's address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df9-nc-Qi7">
-                                <rect key="frame" x="20" y="92" width="229" height="25"/>
+                                <rect key="frame" x="20" y="169" width="229" height="25"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Customer's address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpP-st-vUI">
-                                <rect key="frame" x="20" y="154" width="218" height="25"/>
+                                <rect key="frame" x="20" y="231" width="218" height="25"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Customer's contact:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmk-ap-IJw">
-                                <rect key="frame" x="20" y="278" width="212" height="25"/>
+                                <rect key="frame" x="20" y="355" width="212" height="25"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rAdd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKK-ao-9HN">
-                                <rect key="frame" x="20" y="125" width="335" height="21"/>
+                                <rect key="frame" x="20" y="202" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cAdd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w09-vi-TlZ">
-                                <rect key="frame" x="20" y="187" width="335" height="21"/>
+                                <rect key="frame" x="20" y="264" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktt-QS-Ixq">
-                                <rect key="frame" x="20" y="249" width="335" height="21"/>
+                                <rect key="frame" x="20" y="326" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shT-ry-T4l">
-                                <rect key="frame" x="20" y="311" width="335" height="21"/>
+                                <rect key="frame" x="20" y="388" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtN-Zd-uec">
-                                <rect key="frame" x="20" y="373" width="335" height="21"/>
+                                <rect key="frame" x="20" y="450" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tR9-9s-AWc">
-                                <rect key="frame" x="20" y="402" width="335" height="207"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -107,7 +113,6 @@
                         <outlet property="cAddLabel" destination="w09-vi-TlZ" id="moX-F2-mq0"/>
                         <outlet property="contactLabel" destination="shT-ry-T4l" id="56h-mD-UxC"/>
                         <outlet property="eatWhatLabel" destination="tHW-54-hmm" id="6R3-OK-j89"/>
-                        <outlet property="mapView" destination="tR9-9s-AWc" id="P1w-WZ-EPA"/>
                         <outlet property="nameLabel" destination="Ktt-QS-Ixq" id="WHw-hP-HpV"/>
                         <outlet property="rAddLabel" destination="bKK-ao-9HN" id="9nP-6E-Gqf"/>
                         <outlet property="tipLabel" destination="NtN-Zd-uec" id="BFq-Mq-Sk8"/>
@@ -115,7 +120,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuj-Fu-aLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="515.5" y="-1957.5"/>
+            <point key="canvasLocation" x="2020.5" y="-812.5"/>
+        </scene>
+        <!--Map Controller-->
+        <scene sceneID="C0W-YC-koi">
+            <objects>
+                <viewController id="zS4-Jg-rW8" customClass="MapController" customModule="DeliverNow_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6ET-ji-cgH"/>
+                        <viewControllerLayoutGuide type="bottom" id="34F-o4-q3y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nJQ-nS-JpF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sGj-vK-a4G">
+                                <rect key="frame" x="20" y="28" width="335" height="587"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y23-3U-HVh">
+                                <rect key="frame" x="159" y="623" width="57" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="BACK"/>
+                                <connections>
+                                    <action selector="backAction:" destination="zS4-Jg-rW8" eventType="touchUpInside" id="dgE-bA-uMk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mapView" destination="sGj-vK-a4G" id="dTg-DZ-MsM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I2K-85-7Zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2514.5" y="-812.5"/>
         </scene>
         <!--All orders-->
         <scene sceneID="UVz-rP-ckB">
@@ -173,7 +213,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="All orders" id="PAc-Yy-sqK">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="k87-1a-LnF">
+                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="k87-1a-LnF">
                             <connections>
                                 <action selector="backAction:" destination="pAb-Xk-Bp7" id="3kE-Av-Yvy"/>
                             </connections>
@@ -183,7 +223,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARt-jw-wfm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="515.5" y="-1126.5"/>
+            <point key="canvasLocation" x="1505.5" y="-812.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lVM-wQ-ct2">
@@ -200,7 +240,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGh-1Z-cce" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25.5" y="-1126.5"/>
+            <point key="canvasLocation" x="986.5" y="-812.5"/>
         </scene>
         <!--Choice View Controller-->
         <scene sceneID="J6t-iN-RoW">
@@ -214,25 +254,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icc-5u-1RT">
-                                <rect key="frame" x="170" y="617" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="zEJ-Xj-QvJ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STP-eK-w8O">
-                                <rect key="frame" x="137" y="541" width="100" height="30"/>
-                                <state key="normal" title="I want to order"/>
+                                <rect key="frame" x="82" y="283" width="212" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                <state key="normal" title="I WANT TO ORDER"/>
                                 <connections>
                                     <segue destination="R7a-J3-ey5" kind="presentation" id="fRT-yN-srb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aro-p2-4Lm">
-                                <rect key="frame" x="133" y="585" width="109" height="30"/>
-                                <state key="normal" title="I want to deliver"/>
+                                <rect key="frame" x="72" y="332" width="230" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                <state key="normal" title="I WANT TO DELIVER"/>
                                 <connections>
                                     <segue destination="4p3-W5-HVJ" kind="presentation" id="poU-dp-7sg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icc-5u-1RT">
+                                <rect key="frame" x="160" y="623" width="57" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="BACK"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="zEJ-Xj-QvJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -287,12 +330,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Orders" id="h2W-4Z-lqo">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="eHw-fJ-pR5">
+                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="eHw-fJ-pR5">
                             <connections>
                                 <action selector="backAction:" destination="U6P-BA-FR4" id="ehA-ha-0I1"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FJ5-dY-jtq">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="FJ5-dY-jtq">
                             <connections>
                                 <segue destination="GXv-5r-OSf" kind="presentation" id="Bda-Um-JsK"/>
                             </connections>
@@ -302,7 +345,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6up-0x-orU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1505.5" y="-373.5"/>
+            <point key="canvasLocation" x="1505.5" y="-67.5"/>
         </scene>
         <!--Add Order Controller-->
         <scene sceneID="4qp-kT-h7N">
@@ -316,13 +359,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pi4-Bs-R3f">
-                                <rect key="frame" x="170" y="617" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="backAction:" destination="GXv-5r-OSf" eventType="touchUpInside" id="OJ4-Ol-3gj"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What do you want to ead?" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hpV-NP-19V">
                                 <rect key="frame" x="20" y="130" width="335" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -354,10 +390,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhg-wf-sCZ">
-                                <rect key="frame" x="163" y="579" width="49" height="30"/>
-                                <state key="normal" title="Submit"/>
+                                <rect key="frame" x="148" y="358" width="79" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="SUBMIT"/>
                                 <connections>
                                     <action selector="submitAction:" destination="GXv-5r-OSf" eventType="touchUpInside" id="euv-Mf-SmG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pi4-Bs-R3f">
+                                <rect key="frame" x="159" y="623" width="57" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="BACK"/>
+                                <connections>
+                                    <action selector="backAction:" destination="GXv-5r-OSf" eventType="touchUpInside" id="OJ4-Ol-3gj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -375,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRB-kF-ZYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2022.5" y="-373.5"/>
+            <point key="canvasLocation" x="2020.5" y="-67.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qGf-d5-is9">
@@ -392,7 +437,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39L-cC-xXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="943.5" y="-373.5"/>
+            <point key="canvasLocation" x="986.5" y="-67.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -417,24 +462,27 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaU-16-RuB">
-                                <rect key="frame" x="168" y="278" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
+                                <rect key="frame" x="156" y="278" width="63" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="LOGIN"/>
                                 <connections>
                                     <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yEY-2I-FKe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9C-X9-Apb">
-                                <rect key="frame" x="159" y="316" width="57" height="30"/>
-                                <state key="normal" title="Register"/>
-                                <connections>
-                                    <segue destination="Hih-Ba-Gv2" kind="presentation" id="VHz-PA-B3G"/>
-                                </connections>
-                            </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9P-c1-xoA">
-                                <rect key="frame" x="163" y="617" width="48" height="30"/>
-                                <state key="normal" title="Logout"/>
+                                <rect key="frame" x="145" y="623" width="85" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="LOGOUT"/>
                                 <connections>
                                     <action selector="logoutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q08-SG-gfg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9C-X9-Apb">
+                                <rect key="frame" x="138" y="322" width="99" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="REGISTER"/>
+                                <connections>
+                                    <segue destination="Hih-Ba-Gv2" kind="presentation" id="VHz-PA-B3G"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -449,7 +497,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459.5" y="399.5"/>
+            <point key="canvasLocation" x="459.5" y="751.5"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="b4d-8P-jL4">
@@ -493,18 +541,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLK-i9-rdD">
-                                <rect key="frame" x="163" y="579" width="49" height="30"/>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <action selector="submitAction:" destination="Hih-Ba-Gv2" eventType="touchUpInside" id="EVl-L9-vlv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jH6-Wo-wPg">
-                                <rect key="frame" x="170" y="617" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
+                                <rect key="frame" x="159" y="623" width="57" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="BACK"/>
                                 <connections>
                                     <action selector="cancelAction:" destination="Hih-Ba-Gv2" eventType="touchUpInside" id="nEk-Ab-wqL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLK-i9-rdD">
+                                <rect key="frame" x="148" y="350" width="79" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="SUBMIT"/>
+                                <connections>
+                                    <action selector="submitAction:" destination="Hih-Ba-Gv2" eventType="touchUpInside" id="EVl-L9-vlv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -522,7 +572,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84g-Mx-PDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984.5" y="399.5"/>
+            <point key="canvasLocation" x="986.5" y="751.5"/>
         </scene>
         <!--Order Detail User Controller-->
         <scene sceneID="Nay-zM-yXM">
@@ -536,15 +586,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boC-CS-hN9">
-                                <rect key="frame" x="170" y="629" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="backAction:" destination="Z4e-2y-lHR" eventType="touchUpInside" id="Yxf-ER-kUr"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Want to eat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6p-Ma-dEm">
                                 <rect key="frame" x="20" y="103" width="127" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurant's address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H89-z3-Gch">
+                                <rect key="frame" x="20" y="167" width="230" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -609,12 +658,14 @@
                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurant's address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H89-z3-Gch">
-                                <rect key="frame" x="20" y="167" width="230" height="27"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boC-CS-hN9">
+                                <rect key="frame" x="159" y="623" width="57" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="BACK"/>
+                                <connections>
+                                    <action selector="backAction:" destination="Z4e-2y-lHR" eventType="touchUpInside" id="Yxf-ER-kUr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -630,7 +681,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7u-Mu-Ot1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1505.5" y="399.5"/>
+            <point key="canvasLocation" x="1505.5" y="751.5"/>
         </scene>
     </scenes>
 </document>
