@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		403535DD1CF3E64900F9FE58 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403535DC1CF3E64900F9FE58 /* MapViewController.swift */; };
 		403535DF1CF3F0B500F9FE58 /* AllOrdersTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403535DE1CF3F0B500F9FE58 /* AllOrdersTableController.swift */; };
-		403535E01CF3F7B500F9FE58 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403535DC1CF3E64900F9FE58 /* MapViewController.swift */; };
 		406158E71CF303A0001A14E6 /* UserOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406158E61CF303A0001A14E6 /* UserOrderCell.swift */; };
 		406E38091CFEE8E90073C8A5 /* OrderDetailUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406E38081CFEE8E90073C8A5 /* OrderDetailUserController.swift */; };
 		407166DC1CDCF0E20098B17C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407166DB1CDCF0E20098B17C /* AppDelegate.swift */; };
@@ -48,7 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		403535DC1CF3E64900F9FE58 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		403535DE1CF3F0B500F9FE58 /* AllOrdersTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllOrdersTableController.swift; sourceTree = "<group>"; };
 		406158E61CF303A0001A14E6 /* UserOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOrderCell.swift; sourceTree = "<group>"; };
 		406E38081CFEE8E90073C8A5 /* OrderDetailUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailUserController.swift; sourceTree = "<group>"; };
@@ -142,7 +139,6 @@
 				40E961611CF1E316008A6A7E /* addOrderController.swift */,
 				406158E61CF303A0001A14E6 /* UserOrderCell.swift */,
 				40DE3B9A1CF30AF90077DC41 /* UserOrders.swift */,
-				403535DC1CF3E64900F9FE58 /* MapViewController.swift */,
 				403535DE1CF3F0B500F9FE58 /* AllOrdersTableController.swift */,
 				40DBBC9E1CFD6A8F00E797AE /* AllOrdersCell.swift */,
 				40DBBCA01CFDD52C00E797AE /* OrderDetailAllController.swift */,
@@ -374,7 +370,6 @@
 				406158E71CF303A0001A14E6 /* UserOrderCell.swift in Sources */,
 				407166DC1CDCF0E20098B17C /* AppDelegate.swift in Sources */,
 				403535DF1CF3F0B500F9FE58 /* AllOrdersTableController.swift in Sources */,
-				403535DD1CF3E64900F9FE58 /* MapViewController.swift in Sources */,
 				407167101CDCFCEA0098B17C /* ChoiceViewController.swift in Sources */,
 				4071670E1CDCFA9F0098B17C /* SignUpViewController.swift in Sources */,
 				40DBBCA11CFDD52C00E797AE /* OrderDetailAllController.swift in Sources */,
@@ -391,7 +386,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				407166F11CDCF0E20098B17C /* DeliverNow_v2Tests.swift in Sources */,
-				403535E01CF3F7B500F9FE58 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

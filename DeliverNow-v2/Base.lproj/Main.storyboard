@@ -214,12 +214,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yt6-tc-9kz">
-                                <rect key="frame" x="146" y="277" width="83" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icc-5u-1RT">
                                 <rect key="frame" x="170" y="617" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
@@ -241,20 +235,10 @@
                                     <segue destination="4p3-W5-HVJ" kind="presentation" id="poU-dp-7sg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOi-9x-Hgg">
-                                <rect key="frame" x="146" y="359" width="83" height="30"/>
-                                <state key="normal" title="Get location"/>
-                                <connections>
-                                    <segue destination="Z5a-Ax-AP2" kind="presentation" id="mMs-Oa-pBw"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="userNameLabel" destination="yt6-tc-9kz" id="avV-Ma-Zj9"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3TD-z1-Jjd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -392,40 +376,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRB-kF-ZYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2022.5" y="-373.5"/>
-        </scene>
-        <!--Current location-->
-        <scene sceneID="4GE-55-QLG">
-            <objects>
-                <viewController id="cOw-9P-PSk" customClass="MapViewController" customModule="DeliverNow_v2" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uAi-vq-XxR"/>
-                        <viewControllerLayoutGuide type="bottom" id="Et1-Lq-nBD"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ojl-kL-g6N">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ljr-CV-aNt">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Current location" id="hN5-UR-EQU">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="IIg-9z-OBJ">
-                            <connections>
-                                <action selector="backAction:" destination="cOw-9P-PSk" id="EK7-Ob-aaP"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="mapView" destination="ljr-CV-aNt" id="Tpt-aX-pZz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Er-pe-vzv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1639.5" y="-1126.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qGf-d5-is9">
@@ -681,25 +631,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7u-Mu-Ot1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1505.5" y="399.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Rzn-nL-iNx">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z5a-Ax-AP2" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="py7-P1-5rx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="cOw-9P-PSk" kind="relationship" relationship="rootViewController" id="B7N-kN-fvJ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e5a-Ai-lBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1139" y="-1126"/>
         </scene>
     </scenes>
 </document>
