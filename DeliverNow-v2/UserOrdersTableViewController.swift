@@ -102,6 +102,10 @@ class UserOrdersTableViewController: UITableViewController {
         if (userOrder.restaurantAddress != nil) {
             cell.orderStatementLabel.text = userOrder.restaurantAddress
         }
+        // Set tip label.
+        if (userOrder.tip != nil) {
+            cell.tipLabel.text = userOrder.tip
+        }
         return cell
     }
     

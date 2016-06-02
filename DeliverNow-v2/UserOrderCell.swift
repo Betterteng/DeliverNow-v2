@@ -12,6 +12,7 @@ class UserOrderCell: UITableViewCell {
     
     @IBOutlet var eatWhatLabel: UILabel!
     @IBOutlet var orderStatementLabel: UILabel!
+    @IBOutlet var tipLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
