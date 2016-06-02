@@ -51,6 +51,17 @@ class OrderDetailAllController: UIViewController, MKMapViewDelegate, CLLocationM
     }
     
     /*
+     Pass customer's living address to MapController view.
+     */
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "getLocationSegue") {
+            let controller: MapController = segue.destinationViewController as! MapController
+            let address: String = order!.livingAddress!
+            controller.customerLivingAddress = address
+        }
+    }
+    
+    /*
      Back to previous view.
      */
     @IBAction func backAction(sender: UIButton) {
