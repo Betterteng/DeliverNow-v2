@@ -31,6 +31,14 @@ class OrderDetailAllController: UIViewController, MKMapViewDelegate, CLLocationM
     }
     
     /*
+     Make a phone call to customer.
+     */
+    @IBAction func callUser(sender: UIButton) {
+        let number = (order?.contact)!
+        //print(number)
+        UIApplication.sharedApplication().openURL(NSURL(string: "tel://\(number)")!)
+    }
+    /*
      Set labels.
      */
     func setLabels() -> Void {
