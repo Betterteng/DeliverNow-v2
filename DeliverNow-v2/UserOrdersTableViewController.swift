@@ -15,28 +15,37 @@ class UserOrdersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        navigationController?.navigationBar.barTintColor = UIColor(red: 102.0/255.0, green: 255.0/255.0, blue: 204.0/255.0, alpha: 1.0)
         
-        let leftItem = UIBarButtonItem(title: "BACK", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(UserOrdersTableViewController.backAction(_:)))
-        if let font = UIFont(name: "Chalkduster", size: 14.0) {
-            leftItem.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)}
-        navigationController?.navigationBar.topItem?.leftBarButtonItem = leftItem
+        setBarButtonItem()
+        setBarTitle()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    /*
+     Set the style of bar button item.
+     */
     func setBarButtonItem() -> Void {
         let leftItem = UIBarButtonItem(title: "BACK", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(UserOrdersTableViewController.backAction(_:)))
-        if let font = UIFont(name: "Chalkduster", size: 17.0) {
+        if let font = UIFont(name: "Chalkduster", size: 14.0) {
             leftItem.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)}
         navigationController?.navigationBar.topItem?.leftBarButtonItem = leftItem
         
-//        let rightItem = UIBarButtonItem(title: "ADD", style: UIBarButtonItemStyle.Plain, target: self, action: )
-//        if let font = UIFont(name: "Chalkduster", size: 17.0) {
-//            leftItem.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)}
-//        navigationController?.navigationBar.topItem?.leftBarButtonItem = leftItem
+        let rightItem = UIBarButtonItem(title: "ADD", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(UserOrdersTableViewController.addNewOrder))
+        if let font = UIFont(name: "Chalkduster", size: 17.0) {
+            rightItem.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)}
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = rightItem
+    }
+    
+    /*
+     Set the style of bar title.
+     */
+    func setBarTitle() -> Void {
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSForegroundColorAttributeName: UIColor(red: 255.0/255.0, green: 128.0/255.0, blue: 0.0/255.0, alpha: 1.0),
+             NSFontAttributeName: UIFont(name: "Chalkduster", size: 21)!]
     }
     
     /*
@@ -122,5 +131,12 @@ class UserOrdersTableViewController: UITableViewController {
         let action = UIAlertAction(title: "Got it", style: .Default, handler: nil)
         alert.addAction(action)
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    /*
+     Jump to addOrderComtroller view.
+     */
+    func addNewOrder() -> Void {
+        performSegueWithIdentifier("jumpToAOCSegue", sender: nil)
     }
 }

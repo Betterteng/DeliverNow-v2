@@ -14,6 +14,28 @@ class AllOrdersTableController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setBarButtonItem()
+        setBarTitle()
+    }
+    
+    /*
+     Set the style of bar button item.
+     */
+    func setBarButtonItem() -> Void {
+        let leftItem = UIBarButtonItem(title: "BACK", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(UserOrdersTableViewController.backAction(_:)))
+        if let font = UIFont(name: "Chalkduster", size: 14.0) {
+            leftItem.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)}
+        navigationController?.navigationBar.topItem?.leftBarButtonItem = leftItem
+    }
+    
+    /*
+     Set the style of bar title.
+     */
+    func setBarTitle() -> Void {
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSForegroundColorAttributeName: UIColor(red: 255.0/255.0, green: 128.0/255.0, blue: 0.0/255.0, alpha: 1.0),
+             NSFontAttributeName: UIFont(name: "Chalkduster", size: 21)!]
     }
     
     override func didReceiveMemoryWarning() {
