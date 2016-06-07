@@ -32,7 +32,7 @@ class MapController: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
     }
     
     /*
-     Location Delegate Method
+     Location Delegate Method -- This is modified version, but the source comes from StackOverflow.
      */
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = customerLivingAddress!;
